@@ -1,0 +1,587 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 13,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "s",
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"58.215.210.220\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "instant": false,
+          "legendFormat": "江苏电信",
+          "range": true,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"122.96.235.165\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "江苏联通",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"36.156.92.132\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "江苏移动",
+          "range": true,
+          "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"183.36.23.111\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "legendFormat": "广东电信",
+          "range": true,
+          "refId": "D"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"112.90.211.100\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "广东联通",
+          "range": true,
+          "refId": "E"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"183.240.65.191\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "广东移动",
+          "range": true,
+          "refId": "F"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"101.227.191.14\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "上海电信",
+          "range": true,
+          "refId": "G"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"59.81.65.42\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "上海联通",
+          "range": true,
+          "refId": "H"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"183.194.219.220\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "上海移动",
+          "range": true,
+          "refId": "I"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"220.181.173.35\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "北京电信",
+          "range": true,
+          "refId": "J"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"202.108.29.159\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "北京联通",
+          "range": true,
+          "refId": "K"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"222.35.73.1\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "北京移动",
+          "range": true,
+          "refId": "L"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_rtt_sum{job=\"$vpsname\",instance=\"8.8.8.8\"}/fping_rtt_count#平均延迟=总耗时/成功发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "8.8.8.8",
+          "range": true,
+          "refId": "M"
+        }
+      ],
+      "title": "Ping",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent",
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"58.215.210.220\"}/fping_sent_count{job=\"$vpsname\",instance=\"58.215.210.220\"}  #丢包率=丢包数/总发包数",
+          "instant": false,
+          "legendFormat": "江苏电信",
+          "range": true,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"122.96.235.165\"}/fping_sent_count{job=\"$vpsname\",instance=\"122.96.235.165\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "江苏联通",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"36.156.92.132\"}/fping_sent_count{job=\"$vpsname\",instance=\"36.156.92.132\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "江苏移动",
+          "range": true,
+          "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"183.36.23.111\"}/fping_sent_count{job=\"$vpsname\",instance=\"183.36.23.111\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "广东电信",
+          "range": true,
+          "refId": "D"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"112.90.211.100\"}/fping_sent_count{job=\"$vpsname\",instance=\"112.90.211.100\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "广东联通",
+          "range": true,
+          "refId": "E"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"183.240.65.191\"}/fping_sent_count{job=\"$vpsname\",instance=\"183.240.65.191\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "广东移动",
+          "range": true,
+          "refId": "F"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"101.227.191.14\"}/fping_sent_count{job=\"$vpsname\",instance=\"101.227.191.14\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "上海电信",
+          "range": true,
+          "refId": "G"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"59.81.65.42\"}/fping_sent_count{job=\"$vpsname\",instance=\"59.81.65.42\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "上海联通",
+          "range": true,
+          "refId": "H"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"183.194.219.220\"}/fping_sent_count{job=\"$vpsname\",instance=\"183.194.219.220\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "上海移动",
+          "range": true,
+          "refId": "I"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"220.181.173.35\"}/fping_sent_count{job=\"$vpsname\",instance=\"220.181.173.35\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "北京电信",
+          "range": true,
+          "refId": "K"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"202.108.29.159\"}/fping_sent_count{job=\"$vpsname\",instance=\"202.108.29.159\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "北京联通",
+          "range": true,
+          "refId": "J"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"222.35.73.1\"}/fping_sent_count{job=\"$vpsname\",instance=\"222.35.73.1\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "北京移动",
+          "range": true,
+          "refId": "L"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+          },
+          "editorMode": "code",
+          "expr": "fping_lost_count{job=\"$vpsname\",instance=\"8.8.8.8\"}/fping_sent_count{job=\"$vpsname\",instance=\"8.8.8.8\"}  #丢包率=丢包数/总发包数",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "8.8.8.8",
+          "range": true,
+          "refId": "M"
+        }
+      ],
+      "title": "Loss",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "15s",
+  "schemaVersion": 39,
+  "tags": [
+    "Ping"
+  ],
+  "templating": {
+    "list": [
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "add2754a-b8b2-415e-b272-f4448b3a62f9"
+        },
+        "definition": "label_values(job)",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Select VPS",
+        "multi": false,
+        "name": "vpsname",
+        "options": [],
+        "query": {
+          "qryType": 1,
+          "query": "label_values(job)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "15s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "Zenitsu.io - VPS Ping Template",
+  "uid": "a2c1044e-f262-4dab-9caf-18fed03ee08cd",
+  "version": 2,
+  "weekStart": ""
+}
